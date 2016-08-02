@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>fixedlayout</title>
+  <style type="text/css">
+    /* Sunset colors
+    White-ish - #F2F1E4
+    Yellow - #F2B33D
+    Orange - #D96704
+    Brown - #260101
+    */
+    /* Get rid of default body margins */
+    body {
+      margin: 0;
+      padding: 0; /* Just for testing */
+      font-size: 150%;
+    }
+    /* Make HTML5 layout elements block elements for older browsers */
+    header, nav, aside, article, footer, section {
+      display: block;
+    }
+    /* Fixedhead will contain header and nav bar */
+    #fixedhead {
+      position: fixed;
+      top: 0;
+      left: 0; /* Must be 100% wide */
+      width: 100%; /* Must be just tall enough to contain what you put in it */
+      height: 150px;
+    }
+    /* This element is centered inside fixedhead */
+    header {
+      background: #F2B33D;
+      color: #260101;
+      width: 900px;
+      height: 100px;
+      margin: 0 auto;
+    }
+    /* This element is centered inside fixedhead too */
+    nav {
+      background: #D96704;
+      color: #260101;
+      width: 900px;
+      height: 50px;
+      margin: 0 auto;
+    }
+    /* Content div is for side column and main article */
+    #content {
+      background: #F2F1E4;
+      width: 900px;
+      margin: 0 auto; /* Add top and bottom padding behind fixed header/footer */ /* Match to heights of those elements */
+      padding: 150px 0 50px 0;
+    }
+    aside {
+      background: #260101;
+      color: #F2F1E4;
+      width: 130px;
+      padding: 10px;
+      border-right: solid 1px #260101;
+      display: table-cell;
+      min-height:1000px;
+    }
+    article {
+      padding: 10px;
+      display: table-cell;
+    }
+    /* Fixed container for the footer div */
+    #fixedfoot {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%; /* Height should equal footer height */
+      height: 50px;
+    }
+    /* This footer element centered inside fixedfoot */
+    footer {
+      background: #F2B33D;
+      color: #260101;
+      width: 900px;
+      height: 50px;
+      margin: 0 auto;
+    }
+    /* Weirdly-tall paragraphs just for testing */
+    p.test {
+      margin-bottom: 5em;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    //Make older browsers aware of new HTML5 layout tags
+    'header nav aside article footer section'.replace(/\w+/g, function (n) { document.createElement(n) })
+  </script>
+  <div id="fixedhead">
+    <header>
+header
+</header>
+    <nav>
+nav
+</nav>
+  </div>
+  <!-- End fixedhead -->
+  <div id="content">
+    <aside>
+aside
+</aside>
+    <article>
+      <p class="test">Paragraph 1</p>
+      <p class="test">Paragraph 2</p>
+      <p class="test">Paragraph 3</p>
+      <p class="test">Paragraph 4</p>
+      <p class="test">Paragraph 5</p>
+      <p class="test">Paragraph 6</p>
+      <p class="test">Paragraph 7</p>
+      <p class="test">Paragraph 8</p>
+      <p class="test">Paragraph 9</p>
+      <p class="test">Paragraph 10</p>
+      <p>End of article</p>
+    </article>
+  </div>
+  <div id="fixedfoot">
+    <footer>
+footer
+</footer>
+  </div>
+  <!-- End fixedfoot -->
+</body>
+</html>
