@@ -4,8 +4,35 @@
   <title>MyTemplate2</title>
   <!-- Link to external style sheet -->
   <link href="styles.css" rel="stylesheet" type="text/css"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HTML5 Classwork">
 </head>
 <body>
-  <p>This is the body</p>
+  <script>
+ //Make older browsers aware of new HTML5 layout tags
+ 'header nav aside article footer section'.replace(/\w+/g, function (n) { document.createElement(n) })
+ </script>
+ <div id="wrapper">
+   <header>
+     Header
+   </header>
+    <nav>
+      Nav
+    </nav>
+    <article>
+      <p>Many say exploration is part of our destiny, but it’s actually our duty to future generations and their quest to ensure the survival of the human species.</p>
+      <p>Buy why, some say, the moon? Why choose this as our goal? And they may as well ask why climb the highest mountain?</p>
+      <p>If you could see the earth illuminated when you were in a place as dark as night, it would look to you more splendid than the moon.</p>
+      <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+      <p>When I orbited the Earth in a spaceship, I saw for the first time how beautiful our planet is. Mankind, let us preserve and increase this beauty, and not destroy it!</p>
+      <p>Failure is not an option.</p>
+      <p>We want to explore. We’re curious people. Look back over history, people have put their lives at stake to go out and explore … We believe in what we’re doing. Now it’s time to go.</p>
+      <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
+    </article>
+    <footer>
+    footer
+    </footer>
+  </div><!-- End wrapper -->
 </body>
 </html>
